@@ -25,5 +25,5 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y sshpass
 
       - name: Copier my_function sur la VM
-        run: |
-          sshpass -f ps.txt scp my_function.py ubuntu@20.56.74.49:/home/ubuntu/sk/
+        run: echo ps.txt
+        run: sshpass -f ps.txt scp my_function.py ubuntu@20.56.74.49:/home/ubuntu/sk/
