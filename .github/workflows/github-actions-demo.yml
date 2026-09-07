@@ -29,4 +29,4 @@ jobs:
 
 
       - name: Copier my_function sur la VM
-        run: sshpass -p 'Supermotdepasse!42' scp my_function.py ubuntu@20.56.74.49:/home/ubuntu/sk/
+        run: sshpass -p 'Supermotdepasse!42' scp new.txt ubuntu@20.56.74.49:/home/ubuntu/sk/
