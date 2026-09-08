@@ -30,3 +30,15 @@ jobs:
 
       - name: Copier my_function sur la VM
         run: sshpass -p 'Supermotdepasse!42' scp -o StrictHostKeyChecking=no new.txt ubuntu@20.56.74.49:/home/ubuntu/sk/
+
+  docker-orchestration:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Build Docker image
+        run: docker build -t function .
+
+      - name: Run Docker container
+        run: docker run --name function_container function
